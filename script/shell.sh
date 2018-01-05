@@ -5,7 +5,7 @@ symbols=${symbols#$1}
 if [ ! -f $library ];
 then echo "library not exist";
 else echo "library exist";
-cat $library | wc -c
+echo "libraray size:" $(cat $library | wc -c);
 fi
 
 for symbolname in $symbols;

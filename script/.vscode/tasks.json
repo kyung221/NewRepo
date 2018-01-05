@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "command": "bash",
+    "isShellCommand": true,
+    "args": ["-c"],
+    "tasks": [
+        {
+            "taskName": "saveNcompile",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["cmake . && make"]
+        }, {
+            "taskName": "execute",
+            "suppressTaskName": true,
+            "isTestCommand": true,
+            "args": ["./opencv_test"]
+        }
+    ]
+ }
+  
+ 

@@ -1,0 +1,3 @@
+/home/alchera/Develop/script/build/CMakeFiles/edit_cache.dir
+/home/alchera/Develop/script/build/CMakeFiles/rebuild_cache.dir
+/home/alchera/Develop/script/build/CMakeFiles/CheckSymbol.dir

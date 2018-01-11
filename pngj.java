@@ -52,15 +52,16 @@ public class LoadTest extends TestBackbone {
 
         Assert.assertNotNull(lhs);
         Assert.assertNotNull(lhs.data);
-
+        int len=0;
         for(int i=0;i<lhs.height*lhs.channel;i++) {
             ImageLineByte line = pngl.readRowByte();
             byte[] line1 = line.getScanlineByte();
-
-            lhs.data[(line1.length)*i]=line1[0];
+            len=line1.length;
+           // lhs.data[(line1.length)*i]=line1[0];
             System.arraycopy(line1,0,lhs.data,(line1.length)*i,line1.length);
-        }
 
+        }
+        
         assertNotNull(lhs);
     }
 
@@ -83,10 +84,10 @@ public class LoadTest extends TestBackbone {
             ImageLineByte line = pngr.readRowByte();
             byte[] line1 = line.getScanlineByte();
 
-            rhs.data[(line1.length)*i]=line1[0];
+            //rhs.data[(line1.length)*i]=line1[0];
             System.arraycopy(line1,0,rhs.data,(line1.length)*i,line1.length);
         }
-        ;
+
         assertNotNull(rhs);
     }
 
